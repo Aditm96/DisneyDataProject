@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <title>Stock Data And Trends</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    </head>
+    
+    <body style = "background-color: #0000e6">
+        <nav class ="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href='file:///C:/Users/aditm/Aditm96.github-Web-Design-Challenge.io/WebVisualizations/Landing.html'>Disney Stock Data</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle= "dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Plots
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="file:///C:/Users/aditm/Aditm96.github-Web-Design-Challenge.io/WebVisualizations/Max%20Temperature.html">Max Temperature</a>
+                          <a class="dropdown-item" href="file:///C:/Users/aditm/Aditm96.github-Web-Design-Challenge.io/WebVisualizations/Cloudiness.html">Cloudiness</a>
+                          <a class="dropdown-item" href="file:///C:/Users/aditm/Aditm96.github-Web-Design-Challenge.io/WebVisualizations/Humidity.html">Humidity</a>
+                          <a class="dropdown-item" href="file:///C:/Users/aditm/Aditm96.github-Web-Design-Challenge.io/WebVisualizations/Wind%20Speed.html">Wind Speed</a>
+                        </div>
+                    </li>
+                    <li class = "nav-item">
+                        <a class = "nav-link" href='file:///C:/Users/aditm/Aditm96.github-Web-Design-Challenge.io/WebVisualizations/Comparison.html'>Comparison</a>
+                    </li>
+                    <li class = "nav-item">
+                        <a class = "nav-link" href='file:///C:/Users/aditm/Aditm96.github-Web-Design-Challenge.io/WebVisualizations/Data.html'>Data</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class = "container">
+            <div class = "row">
+                <div class = "col-md-12">
+                    <form id = "form">
+                        <div class = "form-group">
+                            <label for = "example-form">Enter Date</label>
+                            <input class ="form-control" id = "date-form-input" name = "example-form" type = "text">
+                        </div>
+                        <button id = "button" type = "button" class = "btn btn-default">Enter</button>
+                    </form>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col-md-12">
+                    <h1>Filtered Date Data
+                        <span></span>
+                    </h1>
+                    <table class = "table table-striped" id = "FilteredDisneyTable">
+                        <thead>
+                            <th>Date</th>
+                            <th>Open Stock Price</th>
+                            <th>Highest Stock Price</th>
+                            <th>Lowest Stock Price</th>
+                            <th>Closing Stock Price</th>
+                            <th>Volume</th>   
+                        </thead>
+                        <tbody id = "FilteredDisneyData"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class = container2>
+            <div class ="jumbotron">
+                <h1 class = "display-6"><strong>Comparison: Latitude vs. X</strong></h1>
+                <hr class = "my-4">
+                <p class = "lead">Click any plot to get an in-depth analysis.</p>
+                <div class = 'row'>
+                    <div class = "column">
+                        <p class = "lead"><strong>Vs. Max Temperature</strong></p>
+                        <a class = "link" href = 'file:///C:/Users/aditm/Aditm96.github-Web-Design-Challenge.io/WebVisualizations/Max%20Temperature.html'>Vs. Max Temperature</a>
+                        <img src = "C:\Users\aditm\Aditm96.github-Web-Design-Challenge.io\WebVisualizations\Resources\Assets/Fig1.png">  
+                        <p class = "lead"><strong>Vs. Cloudiness </strong></p>
+                        <a class = "link" href = 'file:///C:/Users/aditm/Aditm96.github-Web-Design-Challenge.io/WebVisualizations/Cloudiness.html'>Vs. Cloudiness</a>
+                        <img src = "C:\Users\aditm\Aditm96.github-Web-Design-Challenge.io\WebVisualizations\Resources\Assets/Fig3.png">  
+                    </div>
+                    <div class = "column">
+                        <p class = "lead"><strong>Vs. Humidity</strong></p>
+                        <a class = "link" href = 'file:///C:/Users/aditm/Aditm96.github-Web-Design-Challenge.io/WebVisualizations/Humidity.html'>Vs. Humidity</a>
+                        <img src = "C:\Users\aditm\Aditm96.github-Web-Design-Challenge.io\WebVisualizations\Resources\Assets/Fig2.png">
+                        <p class = "lead"><strong>Vs. Wind Speed</strong></p>
+                        <a class = "link" href = 'file:///C:/Users/aditm/Aditm96.github-Web-Design-Challenge.io/WebVisualizations/Wind%20Speed.html'>Vs. Wind Speed</a>
+                        <img src = "C:\Users\aditm\Aditm96.github-Web-Design-Challenge.io\WebVisualizations\Resources\Assets/Fig4.png">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    
+    </body>
+</html>
