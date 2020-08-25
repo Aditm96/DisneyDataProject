@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <title>Front Page</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    
+    <body>
+        <nav class ="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href='file:///C:/Users/aditm/DisneyDataProject/Front End Page.html'>Disney Stock Data</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle= "dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Plots
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="file:///C:/Users/aditm/Aditm96.github-Web-Design-Challenge.io/WebVisualizations/Max%20Temperature.html">Max Temperature</a>
+                          <a class="dropdown-item" href="file:///C:/Users/aditm/Aditm96.github-Web-Design-Challenge.io/WebVisualizations/Cloudiness.html">Cloudiness</a>
+                          <a class="dropdown-item" href="file:///C:/Users/aditm/Aditm96.github-Web-Design-Challenge.io/WebVisualizations/Humidity.html">Humidity</a>
+                          <a class="dropdown-item" href="file:///C:/Users/aditm/Aditm96.github-Web-Design-Challenge.io/WebVisualizations/Wind%20Speed.html">Wind Speed</a>
+                        </div>
+                    </li>
+                    <li class = "nav-item">
+                        <a class = "nav-link" href='file:///C:/Users/aditm/Aditm96.github-Web-Design-Challenge.io/WebVisualizations/Comparison.html'>Comparison</a>
+                    </li>
+                    <li class = "nav-item">
+                        <a class = "nav-link" href='file:///C:/Users/aditm/Aditm96.github-Web-Design-Challenge.io/WebVisualizations/Data.html'>Data</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <h1 class = "display-4"><strong>Stock Price By Day</strong></h1>
+
+        <div class = "row">
+            <div class = "col-md-12">
+                <form id = "form">
+                    <div class = "form-group">
+                        <label for = "example-form">Enter Date</label>
+                        <input class ="form-control" id = "date-form-input" name = "example-form" type = "text">
+                    </div>
+                    <button id = "button" type = "button" class = "btn btn-default">Enter</button>
+                </form>
+            </div>
+        </div>
+
+        <div class = "row">
+            <div class = "col-md-12">
+                <h1>Filtered Stock Data
+                    <span></span>
+                </h1>
+                <table class = "table table-striped" id = "FilteredSpaceTable">
+                    <thead>
+                        <th>date</th>
+                        <th>open</th>
+                        <th>high</th>
+                        <th>low</th>
+                        <th>close</th>
+                        <th>volume</th>  
+                    </thead>
+                    <tbody id = "FilteredDisneyData"></tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+    
+    </body>
+</html>

@@ -1,9 +1,8 @@
 # Local Postgres DB Info
-local_db_user = 'postgres'
-local_db_pwd = 'postgres'
-local_db_endpoint = 'localhost'
-local_db_port = '5432'
-local_db_name = 'Disney Data'
+host = 'http://disneydata.c6rvkyidwkym.us-east-2.rds.amazonaws.com/'
+username = 'admin'
+password = 'Disney2020'
+database = 'disney'
 # Cloud/AWS MySQL DB Info
 remote_db_endpoint = 'disneydata.cy1ezwo3awhz.us-east-2.rds.amazonaws.com'
 remote_db_port = '3306'
