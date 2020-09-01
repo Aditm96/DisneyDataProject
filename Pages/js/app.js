@@ -1,23 +1,22 @@
 // from DisneyData.js
 var tableData = Data;
 
-var Year = [];
+var Stock_Date = [];
+
 for (var i = 0; i < tableData.length; i++) {
   var StockDate = tableData[i];
-  Year.push(StockDate.date)
+  Stock_Date.push(StockDate.date)
 };
-
-console.log(Year)
+console.log(Stock_Date)
 function init() {
   var selector = d3.select("#selDataset");
-  Year.forEach((Stocks) => {
+  Stock_Date.forEach((Stocks) => {
   selector
     .append("option")
     .text(Stocks)
     .property("value", Stocks)
   })
 };
-
 
 function updateData(StockData) {
   var selector = d3.select("#selDataset");
@@ -26,14 +25,14 @@ function updateData(StockData) {
   var FilterDate = tableData.filter(DateFiltered => DateFiltered.date == inputValue);
   console.log(FilterDate);
   var tbody = d3.select("#FilteredDisneyTable");
-    FilterDate.forEach(function(FilteredDisneyData) {
-        var row = tbody.append("tr") 
-        Object.entries(FilteredDisneyData).forEach(function([key, value]) {
-            console.log(key, value);   
-        var cell = row.append("td");
-        cell.text(value);
-        });
-    })
+  FilterDate.forEach(function(FilteredDisneyData) {
+    var row = tbody.append("tr") 
+    Object.entries(FilteredDisneyData).forEach(function([key, value]) {
+      console.log(key, value);   
+      var cell = row.append("td");
+      cell.text(value);
+    });
+  })
 };
 
 function optionChanged(newSample) {
