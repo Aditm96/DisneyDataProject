@@ -7,6 +7,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     
@@ -44,6 +45,16 @@
         <div class="row">
             <div class="col-md-2">
               <div class="well">
+                <h5>Number of Days Back:</h5>
+                <select id="sel2Dataset" onchange="optionChanged2(this.value)"></select>
+                <div id="chartContainer" style="height: 300px; width: 900px;"></div>
+              </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+              <div class="well">
                 <h5>Stock Date:</h5>
                 <select id="selDataset" onchange="optionChanged(this.value)"></select>
               </div>
@@ -68,7 +79,7 @@
                 </table>
             </div>
         </div>
-
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     </body>
 
     <script src="js/DisneyData.js"></script>
