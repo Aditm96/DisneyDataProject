@@ -46,7 +46,16 @@
             <div class="col-md-2">
               <div class="well">
                 <h5>Number of Days Back:</h5>
-                <select id="sel2Dataset" onchange="optionChanged2(this.value)"></select>
+                <select id="sel2Dataset">
+                    <option value="5D">5D</option>
+                    <option value="7D">7D</option>
+                    <option value="1M">1M</option>
+                    <option value="3M">3M</option>
+                    <option value="6M">6M</option>
+                    <option value="1Y">1Y</option>
+                    <option value="5Y">5Y</option>
+                    <option value="10Y">10Y</option>
+                </select>
                 <div id="chartContainer" style="height: 300px; width: 900px;"></div>
               </div>
             </div>

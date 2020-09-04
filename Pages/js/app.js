@@ -17,9 +17,6 @@ for (var x = 0; x < tableData.length; x++) {
 }
 
 //Part 1: The Graph by Time
-//Dropdown Options
-var Time = ['5D', '7D', '1M', '2M', '3M', '6M', '1Y', '2Y', '3Y', '5y', '10Y']
-
 //Create the Range for the X variables 
 var FiveData = X.slice(-6, -1)
 var WeekData = X.slice(-8, -1)
@@ -33,21 +30,26 @@ var ThreeYearData = X.slice(-1096,-1)
 var FiveYearData = X.slice(-1826,-1)
 
 //Create the Range for the Y variables 
-var FiveDate = Stock_Date.slice(-6, -1)
-var WeekDate = Stock_Date.slice(-8, -1)
-var MonthDate = Stock_Date.slice(-31, -1)
-var TwoMonthDate = Stock_Date.slice(-62,-1)
-var ThreeMonthDate = Stock_Date.slice(-93,-1)
-var SixMonthDate = Stock_Date.slice(-183,-1)
-var YearDate = Stock_Date.slice(-366,-1)
-var TwoYearDate = Stock_Date.slice(-731,-1)
-var ThreeYearDate = Stock_Date.slice(-1096,-1)
-var FiveYearDate = Stock_Date.slice(-1826,-1)
-
-
-console.log(FiveData)
-console.log(FiveDate)
-
+var ThreeMonthDigitRange = [];
+for (var i = 1; i < 91; i++) {
+  ThreeMonthDigitRange.push(i)
+}
+var SixMonthDigitRange = [];
+for (var i = 1; i < 184; i++) {
+  SixMonthDigitRange.push(i)
+}
+var YearDigitRange = [];
+for (var i = 1; i < 367; i++) {
+  YearDigitRange.push(i)
+}
+var FiveYearDigitRange = [];
+for (var i = 1; i < 1097; i++) {
+  FiveYearDigitRange.push(i)
+}
+var TenYearDigitRange = [];
+for (var i = 1; i < 2686; i++) {
+  TenYearDigitRange.push(i)
+}
 console.log(Stock_Date)
 
 //Initialize the Data
@@ -59,14 +61,6 @@ function init() {
     .text(Stocks)
     .property("value", Stocks)
   })
-  var Time_Selector = d3.select("#sel2Dataset");
-  Time.forEach((TimeStock) => {
-    Time_Selector
-      .append("option")
-      .text(TimeStock)
-      .property("value", TimeStock)
-  })
-
 };
 
 function init2() {
@@ -77,7 +71,58 @@ function init2() {
     Plotly.newPlot("chartContainer", Data);
 }
 
+//Change the plot whenever the time_selector changes
+d3.select("#sel2Dataset").on("change", updatePlotly);
 
+//UpdatePlotly
+function updatePlotly() {
+  var dropdownMenu = d3.select("#sel2Dataset").node();
+  // Assign the value of the dropdown menu option to a variable
+  var dataset = dropdownMenu.value;
+  // Initialize x and y arrays
+  var x = [];
+  var y = [];
+
+  switch(dataset) {
+    case "5D":
+      x = [1,2,3,4,5];
+      y = FiveData;
+      break;
+    case "7D":
+      x = [1,2,3,4,5,6,7];
+      y = WeekData;
+      break;
+    case "1M":
+      x = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30];
+      y = MonthData;
+      break;
+    case "3M":
+      x = ThreeMonthDigitRange;
+      y = ThreeMonthData;
+      break;
+    case "6M":
+      x = SixMonthDigitRange;
+      y = SixMonthData;
+    break;
+    case "1Y":
+      x = YearDigitRange;
+      y = YearData;
+    break;
+    case "5Y":
+      x = FiveYearDigitRange;
+      y = FiveYearData;
+    break;
+    case "10Y":
+      x = TenYearDigitRange;
+      y = X;
+    break;
+
+  }
+
+  Plotly.restyle("chartContainer", "x", [x]);
+  Plotly.restyle("chartContainer", "y", [y]);
+
+}
 
 
 function updateData(StockData) {
@@ -106,7 +151,4 @@ function optionChanged(newSample) {
 init();
 init2();
 
-function optionChanged2(newSample) {
-  // Fetch new data each time a new sample is selected
-  updateTimeData(newSample);
-};
+
