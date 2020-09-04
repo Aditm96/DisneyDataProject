@@ -23,11 +23,21 @@ var WeekData = X.slice(-8, -1)
 var MonthData = X.slice(-31, -1)
 var TwoMonthData = X.slice(-62,-1)
 var ThreeMonthData = X.slice(-93,-1)
+var Reverse_ThreeMonth = ThreeMonthData.reverse()
 var SixMonthData = X.slice(-183,-1)
+var Reverse_SixMonth = SixMonthData.reverse()
 var YearData = X.slice(-366,-1)
+var Reverse_YearData = YearData.reverse()
 var TwoYearData = X.slice(-731,-1)
+var Reverse_TwoYearData = TwoYearData.reverse()
 var ThreeYearData = X.slice(-1096,-1)
+var Reverse_ThreeYearData = ThreeYearData.reverse()
 var FiveYearData = X.slice(-1826,-1)
+var Reverse_FiveYearData = FiveYearData.reverse()
+var Reverse_TenYearData = X.reverse()
+
+var Reverse_ThreeMonth = ThreeMonthData.reverse()
+console.log(Reverse_ThreeMonth)
 
 //Create the Range for the Y variables 
 var ThreeMonthDigitRange = [];
@@ -66,7 +76,7 @@ function init() {
 function init2() {
   Data = [{
     y: FiveData,
-    x: [1,2,3,4,5]}];
+    x: [5,4,3,2,1]}];
   
     Plotly.newPlot("chartContainer", Data);
 }
@@ -85,36 +95,36 @@ function updatePlotly() {
 
   switch(dataset) {
     case "5D":
-      x = [1,2,3,4,5];
+      x = [5,4,3,2,1];
       y = FiveData;
       break;
     case "7D":
-      x = [1,2,3,4,5,6,7];
+      x = [7,6,5,4,3,2,1];
       y = WeekData;
       break;
     case "1M":
-      x = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30];
+      x = [30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1];
       y = MonthData;
       break;
     case "3M":
       x = ThreeMonthDigitRange;
-      y = ThreeMonthData;
+      y = Reverse_ThreeMonth;
       break;
     case "6M":
       x = SixMonthDigitRange;
-      y = SixMonthData;
+      y = Reverse_SixMonth
     break;
     case "1Y":
       x = YearDigitRange;
-      y = YearData;
+      y = Reverse_YearData;
     break;
     case "5Y":
       x = FiveYearDigitRange;
-      y = FiveYearData;
+      y = Reverse_FiveYearData;
     break;
     case "10Y":
       x = TenYearDigitRange;
-      y = X;
+      y = Reverse_TenYearData;
     break;
 
   }
