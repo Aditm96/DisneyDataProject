@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <title>Stock Data And Trends</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    
+    <body>
+        <nav class ="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href='C:\Users\aditm\DisneyDataProject\Pages\Front End Page.html'>Disney Stock Data</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav ml-auto">
+                    <img src="https://i0.wp.com/dapsmagic.com/wp-content/uploads/2019/08/The-Walt-Disney-Company-Logo.jpg?fit=1280%2C720&ssl=1" style="width:42px;height:42px;">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle= "dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Stock Data Visualizations
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="file:///C:/Users/aditm/DisneyDataProject/Pages/Stock.html">Stock Analysis and Predictions</a>
+                          <a class="dropdown-item" href="file:///C:/Users/aditm/DisneyDataProject/Pages/Stock Option Chart.html">Stock Information</a>
+                        </div>
+                    </li>
+                    <li class = "nav-item">
+                        <a class = "nav-link">Disney Movies</a>
+                    </li>
+                    <li class = "nav-item">
+                        <a class = "nav-link">Disney Plus</a>
+                        
+                    </li>
+                    <li class = "nav-item">
+                        <a class = "nav-link" href = "file:///C:/Users/aditm/DisneyDataProject/Pages/Team_Page"> Team</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <h1 class = "display-4"><strong>Disney Closing Stock Price</strong></h1>
+
+        <div class="row">
+            <div class="col-md-2">
+              <div class="well">
+                <h5>Number of Days Back ():</h5>
+                <select id="sel2Dataset">
+                    <option value="5D">5D</option>
+                    <option value="7D">7D</option>
+                    <option value="1M">1M</option>
+                    <option value="3M">3M</option>
+                    <option value="6M">6M</option>
+                    <option value="1Y">1Y</option>
+                    <option value="5Y">5Y</option>
+                    <option value="10Y">10Y</option>
+                </select>
+                <div id="chartContainer" style="height: 300px; width: 900px;"></div>
+              </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+              <div class="well">
+                <h5>Stock Date:</h5>
+                <select id="selDataset" onchange="optionChanged(this.value)"></select>
+              </div>
+            </div>
+        </div>
+
+        <div class = "row">
+            <div class = "col-md-12">
+                <h1>Filtered Date Data
+                    <span></span>
+                </h1>
+                <table class = "table table-striped" id = "FilteredDisneyTable">
+                    <thead>
+                        <th>date</th>
+                        <th>open</th>
+                        <th>high</th>
+                        <th>low</th>
+                        <th>close</th>
+                        <th>volume</th>
+                    </thead>
+                    <tbody id = "FilteredDisneyData"></tbody>
+                </table>
+            </div>
+        </div>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    </body>
+
+    <script src="js/DisneyData.js"></script>
+    <script src="js/app.js"></script>
+
+
+
+</html>

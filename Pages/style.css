@@ -1,3 +1,85 @@
+.stock-chart-data {
+    background: url("https://wdwnt-buzzy.s3.amazonaws.com/2020/02/Cinderella-castle-hero.jpg") no-repeat center top / cover;;
+}
+
+.stock-chart-data2 {
+    background: #999933;
+}
+
+
+.container {
+    width: 95%;
+    height: 40%;
+    margin-left: 5%;
+}
+
+.container img {
+    width:75%;
+    height: 75%;
+}
+
+.container p {
+    font-size: 15px;
+}
+
+.Container {
+    width: 40%;
+    height: 200px;
+    float: right;
+    margin-right: 3%;
+}
+.Container p {
+    font-size: 15px;
+}
+
+.container2 {
+    width: 40%;
+    height: 40%;
+    margin-left: 3%;
+}
+
+.container2 img {
+    width:75%;
+    height: 75%;
+}
+
+.container3 {
+    width: 40%;
+    height: 40%;
+    margin-left: 3%;
+}
+
+.container3 img {
+    width:75%;
+    height: 75%;
+}
+
+.container3 p {
+    font-size: 15px;
+}
+
+.container2 img {
+    width:75%;
+    height: 75%;
+}
+
+.container4 {
+    width: 95%;
+    height: 25%;
+    margin-left: 3%;
+}
+
+.container4 img {
+    width:75%;
+    height: 75%;
+}
+
+
+
+
+
+
+
 .row.heading h2 {
     color: #fff;
     font-size: 52.52px;
@@ -112,3 +194,4 @@ ul{
 .our-webcoderskull .cnt-block .follow-us li .fa:hover{ 
    color:#025a8e;
 }
+
