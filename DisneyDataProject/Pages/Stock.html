@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <title>Stock Data And Trends</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    
+    <body>
+        <nav class ="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href='file:///C:/Users/aditm/Aditm96.github-Web-Design-Challenge.io/WebVisualizations/Landing.html'>Disney Stock Data</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav ml-auto">
+                    <img src="https://i0.wp.com/dapsmagic.com/wp-content/uploads/2019/08/The-Walt-Disney-Company-Logo.jpg?fit=1280%2C720&ssl=1" style="width:42px;height:42px;">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle= "dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Stock Data Visualizations
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="Stock.html">Stock Analysis and Predictions</a>
+                          <a class="dropdown-item" href="Stock Option Chart.html">Stock Information</a>
+                        </div>
+                    </li>
+
+                    <li class = "nav-item">
+                        <a class = "nav-link">Disney Movies</a>
+                    </li>
+
+
+                    <li class = "nav-item">
+                        <a class = "nav-link">Disney Plus</a>
+                        
+                    </li>
+
+                    <li class = "nav-item">
+                        <a class = "nav-link" href = "file:///C:/Users/aditm/DisneyDataProject/Pages/Team_Page"> Team</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <h1 class = "display-4"><strong>Disney Stock Information</strong></h1>
+
+        <div class = "container">
+            <div class ="jumbotron">
+                <h1 class = "display-6"><strong>Total Disney Stock Price since 2010</strong></h1>
+                <hr class = "my-4">
+                <img src="C:\Users\aditm\DisneyDataProject\Stock Chart Images/First Stock Plot.png">
+                <p class = "lead">The Stock Price has increased over time with sharp increases around 2012, 2016 and 2018. 
+                    These changes can be attributed to many factors that can impact stock prices, but the biggest factor is the movies and television industry.
+                    As Disney bought more properties, the box office's yearly change increased more exponentially.
+                </p>
+            </div>
+        </div>
+
+        <div class = "container2">
+            <div class ="jumbotron">
+                <h1 class = "display-6"><strong>Disney Stock Price Trendline Since 2010</strong></h1>
+                <hr class = "my-4">
+                <img src="C:\Users\aditm\DisneyDataProject\Stock Chart Images/Stock Price with Trend.png">
+                <p class = "lead"> I used a moving average over 90 days to determine the trend of the daily stock price. The trendline is highlighted in red. 
+                    I used a moving average to determine the trend because stock price data changes all the time and I needed a method that accounts for that change. 
+                </p>
+            </div>
+        </div>
+
+        <div class = "container3">
+            <div class ="jumbotron">
+                <h1 class = "display-6"><strong>Disney Stock Price with 5 and 10 Year Predictions</strong></h1>
+                <p class = "lead"> The following graphs show the 5-year prediction and 10-year prediction
+                <hr class = "my-4">
+                <img src="C:\Users\aditm\DisneyDataProject\Stock Chart Images/5 Year Forecast Image.png">
+                <img src="C:\Users\aditm\DisneyDataProject\Stock Chart Images/10 Year Forecast.png">
+
+                </p>
+            </div>
+        </div>
+
+        
+        <div class = "container4">
+            <div class ="jumbotron">
+                <h1 class = "display-6"><strong>Box and Whiskers Stock Price by Year</strong></h1>
+                <hr class = "my-4">
+                <img src="C:\Users\aditm\DisneyDataProject\Stock Chart Images/Stock Prices By Year.png">
+            </div>
+        </div>
+
+    </body>
+</html>
