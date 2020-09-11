@@ -195,3 +195,27 @@ ul{
    color:#025a8e;
 }
 
+
+
+
+
+
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .bg {
+    /* The image used */
+    background: url("https://wdwnt-buzzy.s3.amazonaws.com/2020/02/Cinderella-castle-hero.jpg");
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
