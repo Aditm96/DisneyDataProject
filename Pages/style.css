@@ -10,8 +10,16 @@
 .container {
     width: 95%;
     height: 40%;
-    margin-left: 5%;
+    margin-left: auto;
+
 }
+
+
+
+
+
+
+
 
 .container img {
     width:75%;
@@ -75,13 +83,15 @@
 }
 
 
-
+.row {
+    background-color: white;
+}
 
 
 
 
 .row.heading h2 {
-    color: #fff;
+    color: black;
     font-size: 52.52px;
     line-height: 95px;
     font-weight: 400;
@@ -141,7 +151,7 @@ ul{
 .our-webcoderskull .cnt-block{ 
    float:left; 
    width:100%; 
-   background:#fff; 
+   background:white; 
    padding:30px 20px; 
    text-align:center; 
    border:2px solid #d5d5d5;
