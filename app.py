@@ -24,6 +24,26 @@ else:
 def home():
     # Render Home Page
     return render_template('Front End Page.html')
+@app.route("/Stock")
+def stocks():
+    # Render Home Page
+    return render_template('Stock.html')
+@app.route("/Stock_Option")
+def stock_option():
+    # Render Home Page
+    return render_template('Stock_Option_Chart.html')
+@app.route("/Investor")
+def invest():
+    # Render Home Page
+    return render_template('Investor Relations_julia.html')
+@app.route("/Movie")
+def Movie():
+    # Render Home Page
+    return render_template('Disney_Movies_Robert.html')
+@app.route("/Team")
+def team():
+    # Render Home Page
+    return render_template('Team_Page.html')
 
 
     
